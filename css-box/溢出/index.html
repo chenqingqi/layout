@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动溢出</title>
+	</head>
+	<body>
+		
+		<!-- 正常溢出(当父对象不设高度时,子对象能撑开) -->
+		<div class="box-a">
+			<div class="rect-a"></div>
+		</div>
+		
+		<!-- 浮动溢出(当父对象不设高度时,子对象无法撑开) -->
+		<div class="box-b">
+			<div class="rect-b"></div>
+		</div>
+		
+		<!-- 
+			
+			元素float之后,无法撑开不设高度的父对象(这其实是一个语言bug)
+			
+			这是因为父对象没有正确设置溢出的处理方式，默认是不处理
+			
+			通过设置overflow:scroll，overflow:hidden就可以正常显示浮动引起的bug
+			
+		-->
+		
+		
+		<style>
+			.box-a
+			{
+				width: 200px;
+				height: auto;
+				border: 1px solid #333;
+			}
+			
+			.rect-a
+			{
+				width: 100px;
+				height: 100px;
+				background-color: #666;
+			}
+			
+			.box-b
+			{
+				width: 200px;
+				height: auto;
+				border: 1px solid red;
+				overflow:hidden;
+			}
+			
+			.rect-b
+			{
+				width: 100px;
+				height: 100px;
+				background-color: goldenrod;
+				
+				float: left;
+			}
+		</style>
+	</body>
+</html>

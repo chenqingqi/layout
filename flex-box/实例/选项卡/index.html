@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡</title>
+	</head>
+	<body>
+		
+		<div class="table">
+			<p class="button">
+				<span class="button-item active">课程</span>
+				<span class="button-item">直播</span>
+				<span class="button-item">文档</span>
+			</p>
+			<div class="content">
+				<ul class="panel">
+					<li class="panel-item">课程</li>
+					<li class="panel-item">直播</li>
+					<li class="panel-item">文档</li>
+				</ul>
+			</div>
+		</div>
+		
+		<style>
+			
+			
+			/**
+			 * 重置
+			 */
+			*
+			{
+				margin : 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			html,body
+			{
+				width: 100%;
+				height: 100%;
+				background-color: #999;
+			}
+			
+			
+			
+			.table
+			{
+				width: 500px;
+				height: 500px;
+				background-color: #fff;
+			}
+			
+			.button
+			{
+				width: 100%;
+				height: 50px;
+				background-color: #fff;
+				border-bottom: 1px solid #e9e9e9;
+				
+				display: flex;
+			}
+			
+			.button-item
+			{
+				background-color: #fff;
+				flex-grow: 1;
+				text-align: center;
+				line-height: 50px;
+				cursor: pointer;
+			}
+			
+			.button-item:hover
+			{
+				background: #e9e9e9;
+			}
+			
+			.active
+			{
+				background: #e9e9e9;
+			}
+			
+			.content
+			{
+				width : 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.panel
+			{
+				width: 1500px;
+				height: 500px;
+				display: flex;
+			}
+			
+			.panel-item
+			{
+				width: 500px;
+				height: 1000px;
+				background-color: #666;
+				
+				color: white;
+				text-align: center;
+				line-height: 450px;
+			}
+			
+		</style>
+		
+		<script>
+			
+			window.onload = function(e)
+			{
+				console.log(window.getComputedStyle(document.querySelector('.panel'),null).width)
+				
+
+				document.querySelector('.button').addEventListener('click',function(e)
+				{
+					switch(e.target.innerText)
+					{
+						case '课程':
+							setFocus(0)
+							break;
+						
+						case '直播':
+							setFocus(1)
+							break;
+						
+						case '文档':
+							setFocus(2)
+							break;
+					}
+				})
+				
+				
+				function setFocus(value)
+				{
+					var button = document.querySelectorAll('.button-item');
+
+					for(var i=0;i<button.length;i++)
+					{
+						button[i].setAttribute('class','button-item')
+					}
+					
+					
+					if(value == 0)
+					{
+						button[0].setAttribute('class','button-item active');
+						document.querySelector('.panel').style.marginLeft = '0px'
+					}
+					
+					if(value == 1)
+					{
+						button[1].setAttribute('class','button-item active');
+						document.querySelector('.panel').style.marginLeft = '-500px'
+					}
+					
+					if(value == 2)
+					{
+						button[2].setAttribute('class','button-item active');
+						document.querySelector('.panel').style.marginLeft = '-1000px'
+					}
+				}
+			}
+			
+		</script>
+		
+	</body>
+</html>

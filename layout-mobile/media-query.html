@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>媒体查询</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+		
+		<script>
+			
+			
+			//设备像素比(虚拟像素/物理像素)
+			console.log(window.devicePixelRatio)
+			
+			
+			/*
+			 
+			物理分辨率：
+			- 代表每英寸垂直和水平显示的点(dpi像素)的数量
+			- 知道分辨率为(1080px*1920px)/1英寸,像素数量为320px*640px,就可以算出来屏幕的实际尺寸
+			
+			虚拟分辨率
+			- 普通屏幕：一个虚拟像素代表了一个物理像素
+			- 视网膜屏幕：在同样的尺寸内容纳了更多物理像素，一个虚拟像素可能代表了几个物理像素
+			
+			
+			开发技巧：
+			- 通过设置width=device-width，浏览器视口将依照虚拟分辨率渲染，否则浏览将按照实际物理像素渲染，所以电脑上看到的很大的，在手机屏幕上会变的很小
+			- 矢量的会被无损放大，比如文字，div等，但图片必须按照实际物理像素设计，才不会模糊。
+			
+			*/
+			
+			
+			/*
+			 
+			媒体查询：
+			- 向不同设备提供不同样式的一种不错方式
+			- max-width 指的是显示区域的宽度，比如浏览器的显示区域宽度,在窗口大小改变或横竖屏转换时会发生变化
+			- max-device-width只与设备相关，横竖屏转换或改变尺寸，缩放都不会发生变化
+			*/
+			
+		</script>
+		
+		<style>
+			
+			
+			/**
+			 * iphone6(查询设备宽度)
+			 */
+			@media screen and (max-device-width:375px)
+			{
+			  	body
+				{   
+				    background-color: black;
+				}
+			}
+			
+			
+			/**
+			 * iphone6 plus(查询设备宽度)
+			 */
+			@media screen and (min-device-width:414px) and (max-device-width:736px)
+			{
+				body
+				{   
+				    background-color: red;
+				}
+			}
+			
+			
+			/**
+			 * ipad(查询设备宽度)
+			 */
+			@media screen and (min-device-width:768px)  and (max-device-width:1024px)
+			{
+				body
+				{   
+				    background-color: cornflowerblue;
+				}
+			}
+
+		</style>
+	</head>
+	<body></body>
+</html>

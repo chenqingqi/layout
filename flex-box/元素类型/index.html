@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>元素类型</title>
+		<style>
+			
+			/*
+			 
+			 通过与block，inline混排发现
+			 
+			 display = flex 就是一个设置溢出为hidden的block块元素，
+			 display = inline-flex 就是行内块元素
+			 
+			 */
+			
+			*
+			{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			.box
+			{
+		      display: -webkit-flex; /* Safari */
+			  display: flex;
+			/*display: inline-flex;*/
+			  width : 300px;
+			  height: 200px;
+			  background-color: #999;
+			  overflow: hidden;
+			}
+			
+			.rect
+			{	width : 300px;
+			  	height: 200px;
+			  	background-color: #666;
+			  	float: left;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="rect">rect</div>
+		<ul  class="box">flex</ul>
+		<ul  class="box">flex</ul>
+		<div class="rect">rect</div>
+		
+	</body>
+</html>

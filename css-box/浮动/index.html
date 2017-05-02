@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动</title>
+	</head>
+	<body>
+		
+		<!-- 浮动元素与块级元素 -->
+		<div class="ex-a">
+			<div class="block">1</div>
+			<div class="float">2</div>
+			<div class="block">1</div>
+		</div>
+		
+		<style>
+			
+			.block
+			{
+				width: 100px;
+				height: 100px;
+				background-color: #333;
+				margin-bottom: 3px;
+				
+				overflow: hidden;
+			}
+			
+			.float
+			{
+				width: 100px;
+				height: 100px;
+				background-color: #666;
+				float: left;
+			}
+		
+		</style>
+		
+		
+		<!-- 浮动元素与行内元素 -->
+		<div class="ex-b">
+			<div class="inline">1</div>
+			<div class="float">2</div>
+			<div class="inline">1</div>
+			<div class="inline">1</div>
+			<div class="inline">1</div>
+			<div class="inline">1</div>
+			<div class="inline">1</div>
+			<div class="inline">1</div>
+		</div>
+		
+		<style>
+			
+			.inline
+			{
+				background-color: #e9e9e9;
+				margin-bottom: 3px;
+				
+				overflow: hidden;
+			}
+			
+			.float
+			{
+				width: 100px;
+				height: 100px;
+				background-color: #666;
+				float: left;
+			}
+		
+		</style>
+		
+		
+		<!-- 浮动坍塌 -->
+		<div class="ex-c">
+			<div class="float">5</div>
+		</div>
+		
+		<style>
+			
+			.ex-c
+			{
+				width: 200px;
+				height: auto;
+				border: 1px solid #888;
+				
+				/*处理溢出*/
+				overflow: hidden;
+				
+			}
+			
+			.float
+			{
+				width: 100px;
+				height: 100px;
+				background-color: #666;
+				float: left;
+			}
+		
+		</style>
+	
+	</body>
+</html>

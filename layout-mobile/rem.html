@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rem</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+		<script src="libs/rem.js"></script>
+		
+		<style>
+			
+			
+			/*通过媒体查询，依据基准宽度 640px ,基准字体大小 36px,换算不同屏幕的布局尺寸*/
+			
+			
+			/**
+			 * 定义基准宽度640,字体为36px
+			 */
+			html
+			{
+				font-size: 36px;
+			}
+			
+			
+			/**
+			 * iphone6(查询设备宽度)
+			 */
+			@media screen and (max-device-width:375px)
+			{
+			  	html
+				{   
+				    font-size: 21px;
+				}
+			}
+			
+			
+			/**
+			 * iphone6 plus(查询设备宽度)
+			 */
+			@media screen and (min-device-width:414px) and (max-device-width:736px)
+			{
+				html
+				{   
+				    font-size: 23.2px;
+				}
+			}
+			
+			
+			/**
+			 * ipad(查询设备宽度)
+			 */
+			@media screen and (min-device-width:768px)  and (max-device-width:1024px)
+			{
+				html
+				{   
+				    font-size: 43.2px;
+				}
+			}
+
+		</style>
+		
+		<script>
+			
+			//通过js换算适配
+			window.onload = function(e)
+			{
+				//适配屏幕
+				rem.adapter(640,36)
+			}
+			
+		</script>
+		
+	</head>
+	<body>Hello</body>
+</html>

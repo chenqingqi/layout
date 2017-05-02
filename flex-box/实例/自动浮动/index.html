@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自动浮动</title>
+	</head>
+	<body>
+		
+		<!-- 
+			
+			当父元素设置为flex的时候，子元素自动浮动
+			
+		-->
+		
+		<div class="box">
+			<div class="rect">123</div>
+			<div class="rect">456</div>
+			<div class="rect">789</div>
+		</div>
+		
+		<style>
+			
+			.box
+			{
+				width: 300px;
+				height: 300px;
+				border: 1px solid #666;
+				
+				display: flex;
+			}
+			
+			.rect
+			{
+				border: 1px solid #333;
+			}
+			
+		</style>
+		
+		<script>
+			
+			window.onload = function(e)
+			{
+				console.log(window.getComputedStyle(document.querySelector('.rect'),null).display)
+			}
+			
+		</script>
+	</body>
+</html>

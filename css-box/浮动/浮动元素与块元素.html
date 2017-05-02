@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动元素和块级元素相遇</title>
+	</head>
+	<body>
+		
+		<!--
+			不设置overflow的块级元素遇到浮动元素时，将无视浮动块的存在
+			设置了overflow的块级元素遇到浮动元素时，将承认浮动块占据的空间
+		-->
+		<div style="float: left;">1</div>
+		<div style="float: left;">1</div>
+		<div style="float: left;">1</div>
+		<div style="float: left;">1</div>
+		<div style="float: left;">1</div>
+		<div style="float: left;">1</div>
+		<div style="float: right;">2</div>
+		<div style="float: right;">2</div>
+		<div style="float: right;">2</div>
+		<div style="float: right;">2</div>
+		<div style="float: right;">2</div>
+		<div style="float: right;">2</div>
+		<div style="float: right;">2</div>
+		<div style="float: right;">2</div>
+		<div style="float: right;">2</div>
+		
+		<div style="width: 500px;height: 200px;background-color: #333;overflow: hidden;"></div>
+	
+	</body>
+</html>

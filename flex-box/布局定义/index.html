@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>排列方向</title>
+		<style>
+			
+			*
+			{
+				margin : 0;
+				padding: 0;
+			}
+			
+			ul
+			{
+				
+				/**
+				 * 元素类型
+				 * @flex 块
+				 * @inline-flex 行内块
+				 */
+				display: flex;
+				
+				
+				/**
+				 * 排列方向
+				 * @row 左右
+				 * @row-reverse 右左
+				 * @column 上下
+				 * @column-reverse 下上
+				 */
+				flex-direction:row;
+				
+				
+				/**
+				 * 是否换行
+				 * @nowrap 不换行
+				 * @wrap 正常换行
+				 * @wrap-reverse 反向换行
+				 */
+				flex-wrap: nowrap;
+				
+				
+				/**
+				 * 水平对齐
+				 * @flex-start 左对齐
+				 * @flex-end   右对齐
+				 * @center     水平居中
+				 * @space-between 左右两端对齐 
+				 * @space-around 左右平均分布
+				 */
+				justify-content: flex-start;
+				
+				
+				/**
+				 * 垂直对齐
+				 * @flex-start 上对齐
+				 * @flex-end   下对齐
+				 * @center     上下居中
+				 * @space-between 上下两端对齐 
+				 * @space-around 上下平均分布
+				 */
+				align-items: flex-start;
+				
+				
+				width: 600px;
+				height: 500px;
+				background-color: yellow;
+			}
+			
+			li
+			{
+				width: 100px;
+				height: 100px;
+				background-color: #333;
+				list-style: none;
+				border: 1px solid #999;
+				
+				color: white;
+				text-align: center;
+				line-height: 100px;
+				font-size: 30px;
+				font-family: "微软雅黑";
+			}
+			
+			.item-focus
+			{
+				/**
+				 * 排列顺序
+				 * @value int 越小越靠前
+				 */
+				order:-1;
+				
+				/**
+				 * 子元素如何分配父元素的剩余空间(父元素有剩余空间时)
+				 */
+				flex-grow:1;
+				
+				
+				/**
+				 * 子元素如何缩小自己的宽度(子元素超出父元素大小时)
+				 */
+				flex-shrink:2;
+				
+				
+				/**
+				 * 重定义子元素的对齐方式，与容器的align相反(如果容器是左右对齐，这里定义的是上下对齐)
+				 */
+				align-self:flex-end;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="item">1</li>
+			<li class="item">2</li>
+			<li class="item-focus">3</li>
+			<li class="item">4</li>
+			<li class="item">5</li>
+			<li class="item">6</li>
+			<li class="item">7</li>
+			<li class="item">8</li>
+		</ul>
+	</body>
+</html>

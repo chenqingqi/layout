@@ -1,0 +1,23 @@
+/**
+ * 媒体查询 
+ */
+html {
+  font-size: 32px;
+}
+/**
+ * 红米
+ */
+@media screen and (min-device-width: 360px) and (max-device-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+} /**
+ * iphone6
+ */
+/**
+ * iphone6 plus
+ */
+/**
+ * ipad
+ */
+/*# sourceMappingURL=media.css.map */

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>菜单</title>
+	</head>
+	<body>
+		
+		<div class="menu">
+			<img class="logo" src="logo.png" />
+			<ul class="items">
+				<li>首页</li>
+				<li>直播</li>
+				<li>课程</li>
+				<li>发现</li>
+				<li>设置</li>
+				<li>关于</li>
+			</ul>
+		</div>
+		
+		<style>
+			
+			/**
+			 * 菜单
+			 */
+			.menu
+			{
+				display: block;
+				width: 100%;
+				height: 50px;
+				
+				background-color:  #1E90FF;
+				border-bottom: 1px solid #ddd;
+			}
+			
+			.logo
+			{
+				display: block;
+				width: auto;
+				height: 40px;
+				padding: 5px 5px 5px 20px;
+				
+				float: left;
+			}
+			
+			
+			.items
+			{
+				display: flex;
+				height: 50px;
+				background-color: #1E90FF;
+				flex-flow: row;
+				justify-content: flex-end;
+			}
+			
+			li
+			{
+				display: list-item;
+				width: 60px;
+				height: 100%;
+				
+				color: white;
+				line-height: 50px;
+				text-align: center;
+				
+				cursor: pointer;
+			}
+			
+			li:hover
+			{
+				background-color: #0D87FD;
+			}
+			
+			
+			/**
+			 * 重置
+			 */
+			*
+			{
+				margin : 0;
+				padding: 0;
+				list-style: none;
+				overflow: hidden;
+			}
+			
+			html,body
+			{
+				width: 100%;
+				height: 100%;
+			}
+			
+		</style>
+		
+		<script>
+			
+			window.onload = function(e)
+			{
+				console.log(window.getComputedStyle(document.querySelector('.items li'),null).display)
+			}
+		</script>
+		
+	</body>
+</html>
