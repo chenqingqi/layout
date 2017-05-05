@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+		<title>移动webapp</title>
+	</head>
+	<body>
+		
+		<!-- 顶栏 -->
+		<div class="topbar">Title</div>
+		
+		<!-- 页面 -->
+		<div class="page">
+			<ul class="panel">
+				<li>A</li>
+				<li>B</li>
+				<li>C</li>
+				<li>D</li>
+			</ul>
+		</div>
+		
+		<!-- 菜单 -->
+		<ul class="menu">
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+			<li>D</li>
+		</ul>
+	
+	</body>
+</html>
+
+
+<style>
+	
+	*
+	{
+		margin : 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	html,body
+	{
+		width : 100%;
+		height: 100%;
+		font-size: 20px;
+		overflow: hidden;
+	}
+	
+	
+	.topbar
+	{
+		width: 100%;
+		height: 3rem;
+		background-color: #333;
+		
+		color: white;
+		text-align: center;
+		line-height: 3rem;
+		
+		position: absolute;
+		top: 0;
+	}
+	
+	
+	.page
+	{
+		width: 100%;
+		height: auto;
+		background-color: #E9E9E9;
+		
+		position: absolute;
+		top: 3rem;
+		bottom: 3rem;
+	}
+	
+	
+	.menu
+	{
+		width: 100%;
+		height: 3rem;
+		background-color: #333;
+		
+		position: absolute;
+		bottom: 0;
+		
+		display: flex;
+		flex-direction: row;
+	}
+	
+	
+	.menu li
+	{
+		width: 25%;
+		height: 3rem;
+		
+		line-height: 3rem;
+		text-align: center;
+		color: white;
+	}
+	
+	
+	.menu li:hover
+	{
+		opacity: 0.5;
+	}
+	
+	
+	.panel
+	{
+		width: 400%;
+		height: 100%;
+		background-color: burlywood;
+		
+		display: flex;
+		flex-direction: row;
+	}
+	
+	
+	.panel li
+	{
+		width: 25%;
+		height: 100%;
+		
+		font-size: 5rem;
+		line-height: 15rem;
+		text-align: center;
+		color: white;
+	}
+	
+	
+</style>
+
+
+<script>
+	
+	window.onload = function()
+	{
+		var menu = document.querySelector('.menu');
+		
+		var panel = document.querySelector('.panel')
+		
+		menu.onclick = function(e)
+		{
+			var count = 0;
+			
+			switch(e.target.innerText)
+			{
+				case 'A':
+					count = 0;
+					break;
+				
+				case 'B':
+					count = 1;
+					break;
+				
+				case 'C':
+					count = 2;
+					break;
+				
+				case 'D':
+					count = 3;
+					break;
+			}
+			
+			panel.style.marginLeft = -(screen.width*count)+'px';
+			panel.style.transition = 'all 0.5s ease';
+		}
+	}
+</script>
+
