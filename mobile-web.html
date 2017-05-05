@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+		<title>移动web网页</title>
+	</head>
+	<body>
+		
+		<!-- 头部 -->
+		<div class="heart">
+			<div class="logo"></div>
+		</div>
+		
+		<!-- 菜单 -->
+		<ul class="menu">
+			<li>直播</li>
+			<li>点播</li>
+			<li>实验室</li>
+			<li>文档</li>
+		</ul>
+		
+		<!-- 列表 -->
+		<div class="list">
+			<p class="title">热门课程<span>更多></span></p>
+			<ul class="content">
+				<li>全景视频影视大师班</li>
+				<li>虚拟现实全景动画师</li>
+				<li>MySQLDBA及Linux运维工程师</li>
+				<li>网络工程师CCNA3.0认证</li>
+				<li>全新Java分布式软件工程师课程</li>
+			</ul>
+		</div>
+		
+		<!-- 列表 -->
+		<div class="list">
+			<p class="title">免费体验<span>更多></span></p>
+			<ul class="content">
+				<li>Oracle网络管理</li>
+				<li>MySQL调优教学视频</li>
+				<li>PHP开发之框架集的应用</li>
+				<li>京东商城首页完整页面制作</li>
+				<li>C++基础</li>
+			</ul>
+		</div>
+		
+		
+		<!-- 页脚 -->
+		<div class="footer">
+			<li>联系我们</li>
+			<li>关于我们</li>
+			<li>版权声明</li>
+			<li>Copyright 2000-2017 All Rights Reserved</li>
+		</div>
+	
+	</body>
+</html>
+
+
+<!-- 样式 -->
+<style>
+	
+	.heart
+	{
+		width: 100%;
+		height:10rem;
+		background-color: #555;
+		
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.heart .logo
+	{
+		width : 5rem;
+		height: 5rem;
+		background-color: #fff;
+		border-radius: 50%;
+		opacity: 0.8;
+	}
+	
+	.menu
+	{
+		width: 100%;
+		height: auto;
+		
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	.menu li
+	{
+		width: 6rem;
+		height: 6rem;
+		background-color: #555;
+		margin: 0.3rem;
+		
+		color: white;
+		text-align: center;
+		line-height: 6rem;
+		
+		flex-grow: 1;
+	}
+	
+	
+	.list
+	{
+		width: auto;
+		height: auto;
+		margin: 0.3rem;
+		border: 1px solid #e9e9e9;
+		border-radius: 0.1rem;
+		font-size: 0.85rem;
+	}
+	
+	.list .title
+	{
+		width: 100%;
+		height: 2.5rem;
+		background-color: #555;
+		
+		line-height: 2.5rem;
+		text-indent: 0.45rem;
+		color: white;
+	}
+	
+	.list .title span
+	{
+		display: block;
+		float: right;
+		margin-right: 0.45rem;
+	}
+	
+	.list .content
+	{
+		width: 100%;
+		height: auto;
+	}
+	
+	.list .content li
+	{
+		width: 100%;
+		height: 2.5rem;
+		border-top: 1px solid #e9e9e9;
+		
+		color: #555;
+		text-align: center;
+		line-height: 2.5rem;
+	}
+	
+	.footer
+	{
+		width: 100%;
+		height: auto;
+		background-color: #555;
+		padding: 1rem 0 1rem 0;
+		
+		display: flex;
+		flex-flow: row;
+		flex-wrap: wrap;
+		
+		font-size: 0.8rem;
+		
+	}
+	
+	.footer li
+	{
+		width: 6rem;
+		height: 1.5rem;
+		text-align: center;
+		line-height: 1.5rem;
+		color: #eee;
+		
+		flex-grow: 1;
+	}
+	
+	
+</style>
+
+
+<!-- 重置 -->
+<style>
+	
+	*
+	{
+		margin : 0;
+		padding: 0;
+		list-style: none;
+		white-space:nowrap
+	}
+	
+	html
+	{
+		width : 100%;
+		height: 100%;
+		font-size: 20px;
+	}
+	
+</style>
+
+
+<!-- 媒体查询(UI宽640px) -->
+<style>
+	
+	/**
+	 * iphone6 plus
+	 */
+	/*@media screen and (min-device-width:414px) and (max-device-width:736px)
+	{
+		html
+		{   
+		    font-size: 20.7px;
+		}
+	}*/
+	
+	
+	/**
+	 * iphone6
+	 */
+	/*@media screen and (min-device-width:375px) and (max-device-width:627px)
+	{
+		html
+		{   
+			font-size: 18.75px;
+		}
+	}*/
+	
+	
+	/**
+	 * ipad
+	 */
+	/*@media screen and (min-device-width:768px)  and (max-device-width:1024px)
+	{
+	  	html
+	  	{   
+	      	font-size: 38.4px;
+	  	}
+	}*/
+	
+</style>
+
+
